@@ -170,7 +170,7 @@ public class L1SimpleConditions {
      * @param alphabet
      */
     private static void vowelOrConsonant(char alphabet) {
-        System.out.println(alphabet + " is " + ("aeiou".indexOf(alphabet) >= 0 ? "vowel" : "consonant"));
+        System.out.println(alphabet + " is " + (("aeiou".indexOf(alphabet) >= 0 || "AEIOU".indexOf(alphabet) >= 0) ? "vowel" : "consonant"));
     }
 
     /**
