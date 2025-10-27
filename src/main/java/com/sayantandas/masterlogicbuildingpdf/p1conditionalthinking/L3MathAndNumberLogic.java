@@ -2,10 +2,65 @@ package com.sayantandas.masterlogicbuildingpdf.p1conditionalthinking;
 
 public class L3MathAndNumberLogic {
     public static void main(String[] args) {
-        //1. Take a 3-digit number and check if all digits are distinct.
-        distinctDigits(1);
-        distinctDigits(13);
+        // 1. Take a 3-digit number and check if all digits are distinct.
+        int[] nums = {123, 112, 987, 100};
+        for (int n : nums) {
+            distinctDigits(n);
+        }
 
+        // 2. Take a 3-digit number and determine if the middle digit is the largest, smallest, or neither.
+        nums = new int[]{295, 649, 438};
+        for (int n : nums) {
+            midDigitStatus(n);
+        }
+
+        // 3. Take a 4-digit number and check if the first and last digits are equal.3. Take a 4-digit number and check if the first and last digits are equal.
+        nums = new int[]{1221, 1532, 3213};
+        for (int n : nums) {
+            eqInFstAndLst(n);
+        }
+
+        // 4. Check whether a given integer is single-digit, double-digit, or multi-digit.
+        nums = new int[]{5, 23, 801, 12345};
+        for (int n : nums) {
+            System.out.println(stateDigit(n));
+        }
+
+        // 5. Check if a number is a multiple of 7 or ends with 7.
+        nums = new int[]{14, 27, 77, 20};
+        for (int n : nums) {
+            System.out.println(mulOrEndsW7(n));
+        }
+
+        // 6. Take coordinates (x, y) and determine which quadrant the point lies in.
+        int[][] coords = { {0, 0}, {0, 6}, {5, 0}, {-2, 4}, {3, -2} };
+        for (int[] xy : coords) {
+            System.out.println(stateCoordinates(xy[0], xy[1]));
+        }
+
+        // 7. Check if an amount can be evenly divided into 2000, 500, and 100 currency notes.
+        int[] amounts = {3500, 2200, 3750, 900};
+        for (int amt : amounts) {
+            canbedivided(amt);
+        }
+
+        // 8. Check if a number lies within the range [100, 999].
+        nums = new int[]{456, 99, 100, 999, 1000};
+        for (int n : nums) {
+            fitsInRange(n);
+        }
+
+        // 9. Take two angles of a triangle and compute the third angle.
+        int[][] angles = { {90, 30}, {100, 80}, {60, 60} };
+        for (int[] pair : angles) {
+            thirdAngle(pair[0], pair[1]);
+        }
+
+        // 10. Check whether a number is a perfect square (without using the square root function).
+        nums = new int[]{9, 15, 0, 144};
+        for (int n : nums) {
+            perfectSquare(n);
+        }
     }
 
     // 1. Take a 3-digit number and check if all digits are distinct.
